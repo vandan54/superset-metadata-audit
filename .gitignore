@@ -1,3 +1,9 @@
 .dist/
 *.log
 .env
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+*.tmp
