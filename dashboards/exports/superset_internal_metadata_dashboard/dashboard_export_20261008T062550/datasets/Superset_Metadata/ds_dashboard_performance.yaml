@@ -1,0 +1,119 @@
+table_name: ds_dashboard_performance
+main_dttm_col: dashboard_created_at
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "SELECT \r\n    d.id AS dashboard_id,\r\n    d.dashboard_title,\r\n    d.created_on\
+  \ AS dashboard_created_at,\r\n    creator.username AS created_by_user,\r\n    COUNT(l.id)\
+  \ AS total_views,\r\n    COUNT(DISTINCT l.user_id) AS unique_viewers,\r\n    MAX(l.dttm)\
+  \ AS last_accessed_at\r\nFROM dashboards d\r\nLEFT JOIN logs l ON d.id = l.dashboard_id\
+  \ AND l.action IN ('dashboard', 'explore_json')\r\nLEFT JOIN ab_user creator ON\
+  \ d.created_by_fk = creator.id\r\nGROUP BY d.id, d.dashboard_title, d.created_on,\
+  \ creator.username;"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 9b36770f-a042-4030-bd51-ac8cbf46583d
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: {}
+  warning_text: null
+columns:
+- column_name: dashboard_created_at
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: last_accessed_at
+  verbose_name: null
+  is_dttm: true
+  is_active: true
+  type: DATETIME
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: total_views
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: unique_viewers
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: dashboard_id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: created_by_user
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: dashboard_title
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: b5c410a1-d1d9-461d-a33d-dd68a07cce97

@@ -1,0 +1,46 @@
+slice_name: User Directory Table
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 41__table
+  viz_type: table
+  query_mode: raw
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    user_created_date: true
+    last_login: true
+  all_columns:
+  - username
+  - full_name
+  - email
+  - role_name
+  - account_status
+  - user_created_date
+  - last_login
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    subject: user_created_date
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  order_by_cols: []
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  extra_form_data: {}
+  dashboards:
+  - 16
+query_context: '{"datasource":{"id":41,"type":"table"},"force":false,"queries":[{"filters":[{"col":"user_created_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["username","full_name","email","role_name","account_status","user_created_date","last_login"],"orderby":[],"annotation_layers":[],"row_limit":1000,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"41__table","viz_type":"table","query_mode":"raw","groupby":[],"time_grain_sqla":"P1D","temporal_columns_lookup":{"user_created_date":true,"last_login":true},"all_columns":["username","full_name","email","role_name","account_status","user_created_date","last_login"],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","subject":"user_created_date","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"order_by_cols":[],"row_limit":1000,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"extra_form_data":{},"dashboards":[16],"force":false,"result_format":"json","result_type":"full","include_time":false},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 0554d73e-4083-4704-b19e-61ee1eaf4425
+version: 1.0.0
+dataset_uuid: 5f3b0b11-d4c0-446b-b389-efb3003648a7
