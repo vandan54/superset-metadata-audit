@@ -29,7 +29,7 @@ The dashboard monitors and audits five core application tables within the Postgr
 ## 📊 Dashboard Architecture & Modules
 
 ### 1. Access & User Overview (Tab 1)
-![Tab 1 - Access & User Overview](dashboards/screenshots/tab1_access_overview.png)
+![Tab 1 - Access & User Overview](./dashboards/screenshots/tab1_access_overview.png)
 
 * **Total Users (KPI Metric):** Real-time tally of registered user accounts across the system.
 * **Role Distribution (Donut Chart):** Proportional distribution of platform users across RBAC levels (`Admin`, `Alpha`, `Gamma`).
@@ -38,7 +38,7 @@ The dashboard monitors and audits five core application tables within the Postgr
 ---
 
 ### 2. User Activity & Engagement (Tab 2)
-![Tab 2 - User Activity](dashboards/screenshots/tab2_user_activity.png)
+![Tab 2 - User Activity](./dashboards/screenshots/tab2_user_activity.png)
 
 * **Daily Active Users Trend (Line Chart):** Longitudinal daily active user (DAU) trends based on event logs.
 * **Top Active Users (Bar Chart):** Action volume rankings highlighting the most active users across the platform.
@@ -47,7 +47,7 @@ The dashboard monitors and audits five core application tables within the Postgr
 ---
 
 ### 3. Dashboard Adoption & Governance (Tab 3)
-![Tab 3 - Dashboard Adoption](dashboards/screenshots/tab3_dashboard_adoption.png)
+![Tab 3 - Dashboard Adoption](./dashboards/screenshots/tab3_dashboard_adoption.png)
 
 * **Most Viewed Dashboards (Horizontal Bar Chart):** Asset consumption leaderboard ranking dashboards by total view count.
 * **Dashboard Adoption & Health Audit (Data Bar Table):**
