@@ -60,7 +60,7 @@ position:
     id: CHART-XD6b_tAlKF
     meta:
       chartId: 162
-      height: 54
+      height: 56
       sliceName: Most Viewed Dashboards
       uuid: 0e8beffb-f22a-4f75-9c26-073081c7e60d
       width: 5
@@ -374,6 +374,8 @@ metadata:
     Alpha: '#454E7C'
     Gamma: '#666666'
     Admin: '#1FA8C9'
+    Total Actions: '#5AC189'
+    Active Users: '#FF7F44'
     Total Views: '#E04355'
   color_scheme_domain: []
   expanded_slices: {}
@@ -381,4 +383,56 @@ metadata:
   timed_refresh_immune_slices: []
   cross_filters_enabled: true
   default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-QKgTw2Whb
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: false
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    name: Role Name
+    filterType: filter_select
+    targets:
+    - column:
+        name: role_name
+      datasetUuid: 5f3b0b11-d4c0-446b-b389-efb3003648a7
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - TAB-ZIqS84AkzL
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 156
+    - 157
+    - 158
+    tabsInScope:
+    - TAB-ZIqS84AkzL
+  - id: NATIVE_FILTER-t22lx_JTX
+    controlValues:
+      enableEmptyFilter: false
+    name: Audit Period
+    filterType: filter_time
+    targets:
+    - {}
+    defaultDataMask:
+      extraFormData:
+        time_range: Last week
+      filterState:
+        value: Last week
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - TAB-ZIqS84AkzL
+      - TAB-yjG9kQOrZ
+      - TAB-SAVBVxPRg
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
 version: 1.0.0
